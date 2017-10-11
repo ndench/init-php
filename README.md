@@ -22,15 +22,15 @@ We'll need a few things installed to get started:
 
 To create a new project:
 
-    1. Open a terminal
-        a. If using OS X press `command + space` and type `terminal` then press `enter`
-        b. If using Windows press the `windows` key and type `git bash` then press `enter`
-    2. In your terminal create a new directory for your project:
-    Tip: when you see a line like the following that starts with `$`, type everything that comes
-    after the `$` into your terminal and press `enter`.
-    ```
-    $ mkdir initphp
-    ```
+1. Open a terminal
+    a. If using OS X press `command + space` and type `terminal` then press `enter`
+    b. If using Windows press the `windows` key and type `git bash` then press `enter`
+2. In your terminal create a new directory for your project:
+Tip: when you see a line like the following that starts with `$`, type everything that comes
+after the `$` into your terminal and press `enter`.
+```
+$ mkdir initphp
+```
 
 
 ### Setup environment
@@ -40,17 +40,17 @@ To create a new project:
 
 When developing it's a good idea to use a virtual machine. This allows you to:
 
-    * Separate each project you work on, so that they don't interfere with each other
-    * Have a dev environment that closely mirrors production (same OS, same package versions, etc)
-    * Destroy and re-create the entire enviroment quickly, incase you break it or clog it with dev shit
+* Separate each project you work on, so that they don't interfere with each other
+* Have a dev environment that closely mirrors production (same OS, same package versions, etc)
+* Destroy and re-create the entire enviroment quickly, incase you break it or clog it with dev shit
 
 Virtualbox is a virtual machine provider, it allows you to run a virtual machine inside your computer.
 Vagrant is a tool which works with Virtualbox to make it easier to create and configure virtual machines.
 We're going to use Ubuntu 16.04 as our operating system.
 
-    1. In your terminal type:
-    ```
-    $ vagrant init ubuntu/xenial64
+1. In your terminal type:
+```
+$ vagrant init ubuntu/xenial64
     ```
 
 This will create a `Vagrantfile` in your current directory. This file stores the configuration for your
@@ -181,11 +181,11 @@ PHP can't serve web requests directly, so we need a webserver. The webserver is 
 to when they request our website. Nginx will then try to find the file the user is requesting, and do
 one of two things with it:
 
-    1. If the file is a static file (image, javascript, css, etc)
-        it will send the file back to the sure directly
-    2. If the file is a PHP file
-        it will send the file to PHP which will execute the file and send it back to Nginx.
-        Nnginx will then send the PHP output back to the user.
+1. If the file is a static file (image, javascript, css, etc)
+    it will send the file back to the sure directly
+2. If the file is a PHP file
+    it will send the file to PHP which will execute the file and send it back to Nginx.
+    Nginx will then send the PHP output back to the user.
 
 To make nginx behave this way, we need to configure it, but first, we need to install it and create a
 webroot for it to server files from:
@@ -209,8 +209,8 @@ $ sudo vim /etc/nginx/site-available/initphp
 Now that we're in Vim, we need to press `i` to get into insert mode, this allows you to type text like
 any other normal text editor. Then you can copy the config below and paste it into Vim using:
 
-    * `ctrl + shift + v` if you're using Windows
-    * `command + shift + v` if you're using OS X
+* `ctrl + shift + v` if you're using Windows
+* `command + shift + v` if you're using OS X
 
 ```
 server {
@@ -263,7 +263,7 @@ our public directory yet!
 
 
 
-##### Start the project
+## Start the project
 
 From now on, make sure you're in your project directory:
 
@@ -272,7 +272,7 @@ $ cd /srv/www/initphp
 ```
 
 
-##### Setup Composer
+### Setup Composer
 
 Composer is a package manager for PHP, we're going to use it to configure our PHP project. You can
 download it from [here](https://getcomposer.org/download/), just copy pase the commands it gives you
