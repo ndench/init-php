@@ -125,6 +125,55 @@ more functionality. We're going to add an extension so that PHP playes nicely wi
 $ sudo apt-get install php7.1-fpm
 ```
 
+#### Turning PHP errors on
+
+By default PHP won't display errors because you don't want them to show
+in production. This isn't very helpful in dev so we're going to turn them on:
+
+```
+$ sudo vim /etc/php/7.1/fpm/php.ini
+```
+
+Now type `/^error_reporting` and hit enter, this will search for error_reporting
+and bring you to the correct line. Now press `i` to go into insert mode, and make
+the line look like this:
+
+```
+error_reporting = E_ALL
+```
+
+Press `esc` to go back to normal mode, then `/^display_errors` and enter.
+Now go into insert mode again and make the line look like:
+
+```
+display_errors = On
+```
+
+Press `esc` then `/^display_startup_errors` then enter. And make the line look like:
+
+```
+display_startup_errors = On
+```
+
+Press `esc` then `/^log_errors` then enter and make the line look like:
+
+```
+log_errors = On
+```
+
+Press `esc` then `/^html_errors` then enter, and make the line look like:
+
+```
+html_errors = On
+```
+
+Now we're done. Press `esc` then `:wq` and enter. Now we restart php-fpm
+to make it reload our changes:
+
+```
+$ sudo systemctl restart php7.1-fpm
+```
+
 
 #### Installing Nginx
 
@@ -168,10 +217,11 @@ server {
         listen 80; # Listen on port 80
         server_name initphp;
         root /srv/www/initphp/public; # Where to look for files to serve
+        index index.php;
 
         location / {
-                # Return the file the user is requestinp, or index.php by default
-                try_files $uri /index.php$is_args$args;
+                # Return the file the user is requesting, or index.php by default
+                try_files $uri $uri/ index.php =404;
 
         }
 
@@ -212,27 +262,17 @@ Now if you go to http://localhost:8080 you'll see `file not found`, because we h
 our public directory yet!
 
 
-#### Installing NPM
 
-NPM is a package manager for JavaScript. It allows us to easily install and manage our frontend
-dependencies.
+##### Start the project
 
-```
-$ sudo apt-get install npm
-```
-
-
-##### Setup NPM
-
-Now we can initialise NPM for our project, it will ask us a few questions but the defaults are
-fine so just hit enter a few times.
+From now on, make sure you're in your project directory:
 
 ```
-$ npm init
+$ cd /srv/www/initphp
 ```
 
 
-#### Setup Composer
+##### Setup Composer
 
 Composer is a package manager for PHP, we're going to use it to configure our PHP project. You can
 download it from [here](https://getcomposer.org/download/), just copy pase the commands it gives you
@@ -244,5 +284,4 @@ values are usually fine so you can just hit enter a few times.
 ```
 $ php composer.phar init
 ```
-
 
