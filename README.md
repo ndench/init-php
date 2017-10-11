@@ -198,7 +198,7 @@ At this point we should be able to go to http://localhost:8080 and see the defau
 To create our Nginx config we're going to use the Vim text editor:
 
 ```
-$ sudo vim /etc/nginx/site-available/initphp
+$ sudo vim /etc/nginx/sites-available/initphp
 ```
 
 Now that we're in Vim, we need to press <kbd>i</kbd> to get into insert mode, this allows you to type text like
