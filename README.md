@@ -280,3 +280,11 @@ values are usually fine so you can just hit <kbd>enter</kbd> a few times.
 $ php composer.phar init
 ```
 
+Update `composer.json`, add the following before the final `}` (make sure the line before it ends with a `,`):
+
+```
+    "autoload": {
+        "psr-4": {"app\\": "src/"}
+    }
+```
+
