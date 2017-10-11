@@ -26,8 +26,10 @@ To create a new project:
     a. If using OS X press `command + space` and type `terminal` then press `enter`
     b. If using Windows press the `windows` key and type `git bash` then press `enter`
 2. In your terminal create a new directory for your project:
+
 Tip: when you see a line like the following that starts with `$`, type everything that comes
 after the `$` into your terminal and press `enter`.
+
 ```
 $ mkdir initphp
 ```
@@ -49,9 +51,10 @@ Vagrant is a tool which works with Virtualbox to make it easier to create and co
 We're going to use Ubuntu 16.04 as our operating system.
 
 1. In your terminal type:
+
 ```
 $ vagrant init ubuntu/xenial64
-    ```
+```
 
 This will create a `Vagrantfile` in your current directory. This file stores the configuration for your
 virtual machine. You can read through all the comments in this file to get an understanding of all the
