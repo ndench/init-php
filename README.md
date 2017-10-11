@@ -49,15 +49,8 @@ Virtualbox is a virtual machine provider, it allows you to run a virtual machine
 Vagrant is a tool which works with Virtualbox to make it easier to create and configure virtual machines.
 We're going to use Ubuntu 16.04 as our operating system.
 
-1. In your terminal type:
-
-```
-$ vagrant init ubuntu/xenial64
-```
-
-This will create a `Vagrantfile` in your current directory. This file stores the configuration for your
-virtual machine. You can read through all the comments in this file to get an understanding of all the
-options you can use, but you need to delete everything and replace it with the following:
+We need to create a `Vagrantfile` in your current directory. This file stores the configuration for your
+virtual machine. Put the following in your `Vagrantfile`
 
 ```
 Vagrant.configure("2") do |config|
