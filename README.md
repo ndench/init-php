@@ -23,7 +23,7 @@ We'll need a few things installed to get started:
 To create a new project:
 
 1. Open a terminal
-    a. If using OS X press <kbd>command</kbd> + <kbd>space<kbd> and type `terminal` then press `enter`
+    a. If using OS X press <kbd>command</kbd> + <kbd>space</kbd> and type `terminal` then press `enter`
     b. If using Windows press the `windows` key and type `git bash` then press `enter`
 2. In your terminal create a new directory for your project:
 
