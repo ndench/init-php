@@ -23,12 +23,12 @@ We'll need a few things installed to get started:
 To create a new project:
 
 1. Open a terminal
-    a. If using OS X press <kbd>command</kbd> + <kbd>space</kbd> and type `terminal` then press `enter`
-    b. If using Windows press the `windows` key and type `git bash` then press `enter`
+    a. If using OS X press <kbd>command</kbd> + <kbd>space</kbd> and type `terminal` then press <kbd>enter</kbd>
+    b. If using Windows press the `windows` key and type `git bash` then press <kbd>enter</kbd>
 2. In your terminal create a new directory for your project:
 
 Tip: when you see a line like the following that starts with `$`, type everything that comes
-after the `$` into your terminal and press `enter`.
+after the `$` into your terminal and press <kbd>enter</kbd>.
 
 ```
 $ mkdir initphp
@@ -137,40 +137,40 @@ in production. This isn't very helpful in dev so we're going to turn them on:
 $ sudo vim /etc/php/7.1/fpm/php.ini
 ```
 
-Now type `/^error_reporting` and hit enter, this will search for error_reporting
-and bring you to the correct line. Now press `i` to go into insert mode, and make
+Now type `/^error_reporting` and hit <kbd>enter</kbd>, this will search for error_reporting
+and bring you to the correct line. Now press <kbd>i</kbd> to go into insert mode, and make
 the line look like this:
 
 ```
 error_reporting = E_ALL
 ```
 
-Press `esc` to go back to normal mode, then `/^display_errors` and enter.
+Press `esc` to go back to normal mode, then `/^display_errors` and <kbd>enter</kbd>.
 Now go into insert mode again and make the line look like:
 
 ```
 display_errors = On
 ```
 
-Press `esc` then `/^display_startup_errors` then enter. And make the line look like:
+Press `esc` then `/^display_startup_errors` then <kbd>enter</kbd>. And make the line look like:
 
 ```
 display_startup_errors = On
 ```
 
-Press `esc` then `/^log_errors` then enter and make the line look like:
+Press `esc` then `/^log_errors` then <kbd>enter</kbd> and make the line look like:
 
 ```
 log_errors = On
 ```
 
-Press `esc` then `/^html_errors` then enter, and make the line look like:
+Press `esc` then `/^html_errors` then <kbd>enter</kbd>, and make the line look like:
 
 ```
 html_errors = On
 ```
 
-Now we're done. Press `esc` then `:wq` and enter. Now we restart php-fpm
+Now we're done. Press `esc` then `:wq` and <kbd>enter</kbd>. Now we restart php-fpm
 to make it reload our changes:
 
 ```
@@ -209,7 +209,7 @@ To create our Nginx config we're going to use the Vim text editor:
 $ sudo vim /etc/nginx/site-available/initphp
 ```
 
-Now that we're in Vim, we need to press `i` to get into insert mode, this allows you to type text like
+Now that we're in Vim, we need to press <kbd>i</kbd> to get into insert mode, this allows you to type text like
 any other normal text editor. Then you can copy the config below and paste it into Vim using:
 
 * <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>v</kbd> if you're using Windows
@@ -240,7 +240,7 @@ server {
 }
 ```
 
-To save the file, we need to exit normal mode by pressing `esc`, then you can type `:wq` and hit enter.
+To save the file, we need to exit normal mode by pressing `esc`, then you can type `:wq` and hit <kbd>enter</kbd>.
 
 Now we have our configuration, we need to enable our initphp site, and disable the default nginx one:
 
@@ -282,7 +282,7 @@ download it from [here](https://getcomposer.org/download/), just copy pase the c
 into your terminal and you'll get a `composer.phar` file in your current directory.
 
 Now we can initialise Composer for our project, it will ask us a few questions but the default 
-values are usually fine so you can just hit enter a few times.
+values are usually fine so you can just hit <kbd>enter</kbd> a few times.
 
 ```
 $ php composer.phar init
