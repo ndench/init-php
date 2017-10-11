@@ -17,4 +17,9 @@ class SearchService
     {
         return $this->client->test();
     }
+
+    public function search(string $query): array
+    {
+        return $this->client->search($query);
+    }
 }

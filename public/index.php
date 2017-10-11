@@ -8,5 +8,13 @@ use app\Service\SearchService;
 $giphy = new GiphyClient();
 $search = new SearchService($giphy);
 
-echo $search->test();
+if (!isset($_GET['q'])) {
+    echo 'Please specify q as a GET parameter';
+    die();
+}
+
+$query = $_GET['q'];
+
+header('Content-Type: application/json');
+echo json_encode($search->search($query));
 
