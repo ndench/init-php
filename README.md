@@ -15,7 +15,6 @@ We'll need a few things installed to get started:
 
 * [Install Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 * [Install Vagrant](https://www.vagrantup.com/downloads.html)
-* [Setup GitHub account](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 
 ### Create the project
