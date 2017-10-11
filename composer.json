@@ -1,0 +1,11 @@
+{
+    "name": "nathan/init-php",
+    "description": "Tutorial to get you initialised with php",
+    "authors": [
+        {
+            "name": "Nathan Dench",
+            "email": "ndenc2@gmail.com"
+        }
+    ],
+    "require": {}
+}
