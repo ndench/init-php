@@ -3,6 +3,7 @@
 namespace app\Service;
 
 use app\Client\GiphyClient;
+use app\Model\Result;
 
 class SearchService
 {
@@ -20,6 +21,15 @@ class SearchService
 
     public function search(string $query): array
     {
-        return $this->client->search($query);
+        $response = $this->client->search($query);
+
+        $results = [];
+        foreach ($response['data'] as $r) {
+            $res = new Result();
+            $res->url = $r['images']['fixed_width']['url'];
+            $results[] = $res;
+        }
+
+        return $results;
     }
 }
