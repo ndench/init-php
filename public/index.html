@@ -12,8 +12,10 @@
         document.addEventListener('DOMContentLoaded', function() {
             app = AppModule();
             searchBox = document.getElementById('search');
-            search.addEventListener('input', function(e) {
-                app.search(this.value);
+            searchBox.addEventListener('keyup', function(e) {
+                if (e.keyCode === 13) {
+                    app.search(this.value);
+                }
             });
         });
     </script>
@@ -45,7 +47,9 @@
                 </div>
             </div>
         </div>
-        <div id="results" class="columns">
+        <div class="columns">
+            <div id="results" class="col-8 col-mx-auto">
+            </div>
         </div>
     </div>
 </body>

@@ -22,7 +22,7 @@ class GiphyClient
         $results = [];
         foreach ($response['data'] as $r) {
             $res = new Result();
-            $res->url = $r['embed_url'];
+            $res->url = $r['images']['fixed_width']['url'];
             $results[] = $res;
         }
 
