@@ -1,9 +1,9 @@
 function AppModule() {
-    function helloWorld() {
-        console.log('hello world');
+    function search(q) {
+        console.log(q);
     }
 
     return {
-        helloWorld: helloWorld,
+        search: search,
     }
 }
